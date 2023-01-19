@@ -9,7 +9,7 @@ end
 
 def give_away(dev, freebie)
 if freebie.dev == self
-freebie.update(dev_id: dev) 
+freebie.update(dev: dev) 
 end
 end
 
