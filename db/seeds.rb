@@ -1,21 +1,20 @@
 puts "Creating companies..."
-Company.create(name: "Google", founding_year: 1998)
-Company.create(name: "Facebook", founding_year: 2004)
-Company.create(name: "Dunder Mifflin", founding_year: 2002)
-Company.create(name: "Enron", founding_year: 1995)
+google = Company.create(name: "Google", founding_year: 1998)
+facebook = Company.create(name: "Facebook", founding_year: 2004)
+dunder = Company.create(name: "Dunder Mifflin", founding_year: 2002)
+enron = Company.create(name: "Enron", founding_year: 1995)
 
 puts "Creating devs..."
-Dev.create(name: "Rick")
-Dev.create(name: "Morty")
-Dev.create(name: "Mr. Meseeks")
-Dev.create(name: "Gazorpazop")
+rick = Dev.create(name: "Rick")
+morty = Dev.create(name: "Morty")
+mes = Dev.create(name: "Mr. Meseeks")
+gaz = Dev.create(name: "Gazorpazop")
 
 puts "Creating freebies..."
 
-# ***************************************************************
-# * TODO: create freebies! Remember, a freebie belongs to a dev *
-# * and a freebie belongs to a company.                         *
-# ***************************************************************
-# Create freebies Here
+Freebie.create(item_name: "water", value: 20, dev_id: rick.id, company_id: google.id)
+Freebie.create(item_name: "pen", value: 30, dev_id: rick.id, company_id: dunder.id)
+Freebie.create(item_name: "cigar", value: 100, dev_id: morty.id, company_id: google.id)
+Freebie.create(item_name: "water", value: 20, dev_id: mes.id, company_id: facebook.id)
 
 puts "Seeding done!"
